@@ -1,0 +1,23 @@
+<body>
+ <div class="container">
+      <img [src] ="logo">
+      <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
+      <form method="post">
+        <div class="inputcontainer">
+            <label for="inputNom">Nom</label>
+            <input type="text" name="nom" id="inputNom" class="form-control" >
+            <label for="inputPrenom">Prenom</label>
+            <input type="text" name="prenom" id="inputPrenom" class="form-control" >
+            <label for="inputKine">Kine</label>
+            <input type="text" name="kine" id="inputKine" class="form-control" >
+            <label for="inputAdresse">Adresse</label>
+            <input type="text" name="adresse" id="inputAdresse" class="form-control" >
+            <input type="hidden" name="_csrf_token" >
+        </div>
+        <div class="btncontainer">
+            <button (click)="toInscription()" class="btn btn-lg btn-primary btn-inscription">S'INSCRIRE</button>
+        </div>
+        </form>
+        </div>
+        </body>
+        
