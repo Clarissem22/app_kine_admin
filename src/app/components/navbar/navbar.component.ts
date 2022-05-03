@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   liens: Lien[] = [
 
     {name:'Home' , routerLink: "/home"},
-    {name:'Programme' , routerLink: "/programme"},
+    {name:'Calendrier' , routerLink: "/calendrier"},
     {name:'Exercice' , routerLink: "/exercices"},
     {name:'Profil' , routerLink: "/profil"},
     {name:'Contact' , routerLink: "/contact"},

@@ -18,6 +18,9 @@ import { CdkAccordionComponent } from './components/cdk-accordion/cdk-accordion.
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { BgContactComponent } from './pages/contact/bg-contact/bg-contact.component';
 import { ParametresComponent } from './pages/parametres/parametres.component';
+import { CalendrierComponent } from './pages/calendrier/calendrier.component';
+import { BgCalendrierComponent } from './pages/calendrier/bg-calendrier/bg-calendrier.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { ParametresComponent } from './pages/parametres/parametres.component';
     CdkAccordionComponent,
     BgContactComponent,
     ParametresComponent,
+    CalendrierComponent,
+    BgCalendrierComponent,
+    CalendarComponent,
   ],
 
   imports: [
