@@ -1,0 +1,17 @@
+<section class="container" >
+<app-navbar></app-navbar>
+<article class="background">
+    <div class="head">
+        <h1>{{title}}</h1>
+          <div class="imghead">
+              <a routerLink = "/contact ">  <img [src]="don"></a>
+              <a routerLink = "/notification">  <img [src]="notification"></a>
+          </div>
+    </div>
+    <div class="block">
+          <div *ngFor="let parametre of parametres" class="blockparam"><img src="/assets/img/parametres/{{parametre.image}}">
+              <p>{{parametre.description}} </p>
+          </div>
+    </div>
+    </article>
+</section>

@@ -10,6 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BgHomeComponent } from './pages/home/bg-home/bg-home.component';
 import { HelloComponent } from './pages/home/hello/hello.component';
+import { ExercicesComponent } from './pages/exercices/exercices.component';
+import { ListeExercicesComponent } from './pages/exercices/liste-exercices/liste-exercices.component';
+import { BgExercicesComponent } from './pages/exercices/bg-exercices/bg-exercices.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { CdkAccordionComponent } from './components/cdk-accordion/cdk-accordion.component';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { BgContactComponent } from './pages/contact/bg-contact/bg-contact.component';
+import { ParametresComponent } from './pages/parametres/parametres.component';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +29,20 @@ import { HelloComponent } from './pages/home/hello/hello.component';
     NavbarComponent,
     BgHomeComponent,
     HelloComponent,
+    ExercicesComponent,
+    ListeExercicesComponent,
+    BgExercicesComponent,
+    ContactComponent,
+    CdkAccordionComponent,
+    BgContactComponent,
+    ParametresComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CdkAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

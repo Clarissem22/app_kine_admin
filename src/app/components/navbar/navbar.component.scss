@@ -58,17 +58,13 @@ nav {
             
             &:hover{
                 background-color: #d61a20;
+                transform: scale(1.1);
+
+                transition: 0.3s;
+
             }
             
 
-            }
-
-            a{
-                &:hover{
-                transform: scale(1.1);
-                transition: 0.3s;
-
-                }
             }
 
         }

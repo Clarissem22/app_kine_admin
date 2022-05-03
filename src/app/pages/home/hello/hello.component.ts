@@ -16,7 +16,7 @@ export class HelloComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.nom = "Charles";
+    this.nom = "Samuel";
     this.photo = "assets/img/kineprofil.png";
     this.nbrexo = 2;
   }

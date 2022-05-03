@@ -1,0 +1,35 @@
+
+.background{
+    background-color: #1b1b1b;
+    border-radius: 25px;
+    margin: 2%;
+    width: 85vw;
+    height: 95%;
+
+    .head{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+
+        h1{
+            text-align: right;
+            width: 60%;
+            font-size: 2.5em;
+            font-weight: 500;
+        }
+
+        .div_imghead{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+
+            a{
+                margin-right: 3%;
+            }
+
+        }
+    }
+
+
+}
