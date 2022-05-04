@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -21,13 +20,14 @@ import { ParametresComponent } from './pages/parametres/parametres.component';
 import { CalendrierComponent } from './pages/calendrier/calendrier.component';
 import { BgCalendrierComponent } from './pages/calendrier/bg-calendrier/bg-calendrier.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { PatientsComponent } from './pages/patients/patients.component';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     InscriptionComponent,
     NavbarComponent,
     BgHomeComponent,
@@ -42,6 +42,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     CalendrierComponent,
     BgCalendrierComponent,
     CalendarComponent,
+    PatientsComponent,
   ],
 
   imports: [
@@ -49,6 +50,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CdkAccordionModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
