@@ -1,0 +1,38 @@
+.bloc {
+    height: 30%;
+    width: 80%;
+    margin: 0 0 3% 20%;
+    border-radius: 25px;
+    background-color: #1b1b1b;
+    color: white;
+    box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contenu{
+        height: 90%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+       align-items: center;
+
+       .img{
+           height: 90%;
+
+           margin: 2%;
+
+           img{
+           object-fit: cover;
+           height: 90%;
+           }
+
+       }
+
+
+    }
+
+    }
+
+
+

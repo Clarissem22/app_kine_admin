@@ -22,6 +22,8 @@ import { BgCalendrierComponent } from './pages/calendrier/bg-calendrier/bg-calen
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { PatientsComponent } from './pages/patients/patients.component';
 import { AuthModule } from './auth/auth.module';
+import { PatientComponent } from './pages/patients/patient/patient.component';
+import { BgPatientsComponent } from './pages/patients/bg-patients/bg-patients.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { AuthModule } from './auth/auth.module';
     BgCalendrierComponent,
     CalendarComponent,
     PatientsComponent,
+    BgPatientsComponent,
+    PatientComponent,
   ],
 
   imports: [
