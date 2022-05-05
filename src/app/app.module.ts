@@ -24,6 +24,8 @@ import { PatientsComponent } from './pages/patients/patients.component';
 import { AuthModule } from './auth/auth.module';
 import { PatientComponent } from './pages/patients/patient/patient.component';
 import { BgPatientsComponent } from './pages/patients/bg-patients/bg-patients.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewPatientComponent } from './pages/patients/new-patient/new-patient.component';
 
 
 @NgModule({
@@ -47,6 +49,7 @@ import { BgPatientsComponent } from './pages/patients/bg-patients/bg-patients.co
     PatientsComponent,
     BgPatientsComponent,
     PatientComponent,
+    NewPatientComponent,
   ],
 
   imports: [
@@ -55,6 +58,8 @@ import { BgPatientsComponent } from './pages/patients/bg-patients/bg-patients.co
     BrowserAnimationsModule,
     CdkAccordionModule,
     AuthModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@ import { ExercicesComponent } from './pages/exercices/exercices.component';
 import { HomeComponent } from './pages/home/home.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { ParametresComponent } from './pages/parametres/parametres.component';
+import { NewPatientComponent } from './pages/patients/new-patient/new-patient.component';
 import { PatientsComponent } from './pages/patients/patients.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "exercices", component: ExercicesComponent, canActivate: [AuthGuard] },
   {path: "calendrier", component: CalendrierComponent, canActivate: [AuthGuard] },
   {path: "patients", component: PatientsComponent, canActivate: [AuthGuard] },
+  {path: "create", component: NewPatientComponent, canActivate: [AuthGuard] },
   {path: "contact", component: ContactComponent, canActivate: [AuthGuard] },
   {path: "parametres", component: ParametresComponent, canActivate: [AuthGuard] },
 

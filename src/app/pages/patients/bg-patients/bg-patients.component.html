@@ -6,6 +6,10 @@
             <a [routerLink]=[linkNotifications]><img class="img_head"[src]="notification" alt=""></a>
         </div>
     </div>
+    <div class="newPatient" (click)="onAddNewPatient()"> 
+        <button (click)="onAddNewPatient()">+</button>
+        <p>Ajouter un nouveau Patient</p>
+    </div>
     <div class="container">
     <app-patient></app-patient>
     <app-patient></app-patient>

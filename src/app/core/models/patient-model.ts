@@ -2,14 +2,14 @@ export class Patient {
     id!: number;
           nom!: string;
           prenom!: string;
-          birthday!: string;
+          birthday!: Date;
           mail?:string;
           telephone?:string;
           imageUrl?: string;
-          datedebutsuivi?: Date;
+          dateDebutSuivi?: Date;
           diagnostic?: string;
           objectif?: string;
           programme?: string;
-          dateconsultation?: Date;
+          lastConsultation?: Date;
           note?: string;
         }

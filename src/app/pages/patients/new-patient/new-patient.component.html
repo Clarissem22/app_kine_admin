@@ -1,0 +1,58 @@
+<div class="form-card">
+  <h2>NOUVEAU PATIENT</h2>
+ <form [formGroup]="snapForm">   
+    <div class="form-group">
+        <label for="nom">Nom</label>
+        <input id="nom" type="text" formControlName="nom">
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input id="prenom" type="text" formControlName="prenom">
+    </div>
+    <div class="form-group">
+        <label for="birthday">Date de naissance</label>
+        <input id="birthday" type="date" formControlName="birthday">
+    </div>
+     <div class="form-group">
+        <label for="mail">Mail</label>
+        <input id="mail" type="text" formControlName="mail">
+    </div>
+      <div class="form-group">
+        <label for="telephone">Téléphone</label>
+        <input id="telephone" type="date" formControlName="telephone">
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Photo de profil</label>
+        <input id="imageUrl" type="text" formControlName="imageUrl">
+    </div>
+     <div class="form-group">
+        <label for="dateDebutSuivi">Suivi depuis le : </label>
+        <input id="dateDebutSuivi" type="date" formControlName="dateDebutSuivi">
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Diagnostic</label>
+        <input id="imageUrl" type="text" formControlName="imageUrl">
+    </div>
+    <div class="form-group">
+        <label for="objectif">Objectif</label>
+        <input id="objectif" type="text" formControlName="objectif">
+    </div>
+    <div class="form-group">
+        <label for="programme">Programme</label>
+        <input id="programme" type="text" formControlName="programme">
+    </div>
+     <div class="form-group">
+        <label for="programme">Dernière consultation</label>
+        <input id="programme" type="date" formControlName="programme">
+    </div>
+    <div class="form-group">
+        <label for="note">Notes</label>
+        <textarea id="note" type="text" formControlName="note" rows="4">
+        </textarea>
+    </div>
+   
+    <div class="action-buttons">
+        <button type="submit" (click)="onSubmitForm()" [disabled]="snapForm.invalid">Enregistrer</button>
+    </div>
+</form>
+</div>
