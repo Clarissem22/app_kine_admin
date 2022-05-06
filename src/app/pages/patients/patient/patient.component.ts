@@ -11,6 +11,18 @@ export class PatientComponent implements OnInit {
   photo!:string;
   nbrexo!:number;
 
+  id!: number;
+          prenom!: string;
+          birthday?: Date;
+          mail?:string;
+          telephone?:string;
+          imageUrl?: string;
+          dateDebutSuivi?: Date;
+          diagnostic?: string;
+          objectif?: string;
+          programme?: string;
+          lastConsultation?: Date;
+          note?: string;
   constructor() {
     this.date= new Date ();
    }

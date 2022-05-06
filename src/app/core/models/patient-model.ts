@@ -2,7 +2,7 @@ export class Patient {
     id!: number;
           nom!: string;
           prenom!: string;
-          birthday!: Date;
+          birthday?: Date;
           mail?:string;
           telephone?:string;
           imageUrl?: string;
