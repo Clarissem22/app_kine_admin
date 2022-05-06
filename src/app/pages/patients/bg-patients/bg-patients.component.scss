@@ -1,0 +1,78 @@
+.background{
+    background-color: #2a2a2a;
+    border-radius: 25px;
+    margin: 2%;
+    width: 85vw;
+    height: 95%;
+    color: white;
+
+    .head{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+
+        h1{
+            text-align: right;
+            width: 60%;
+            font-size: 2.3em;
+            font-weight: 500;
+        }
+
+        .div_imghead{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+
+            a{
+                margin-right: 3%;
+            }
+
+        }
+
+    }
+
+    .newPatient{
+        width: 100%;
+        display: flex;
+        color: #d61a20;
+        font-size : 150%;
+        cursor: pointer;
+        justify-content: flex-end;
+        align-items: center;
+        
+       p{
+           height: 100%;
+           display: flex;
+           align-items: center;
+           margin-right: 2%;
+
+       }
+        
+        button {
+            background: #d61a20;
+            color: #2a2a2a;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            padding: 0.6%;
+            margin: 0 1% 1% 0;
+            border-radius: 100%;
+
+
+            &:hover{
+                transform : scale(1.1);
+                transition: 0.3s;
+        
+              }
+      
+            
+    }
+}
+.container{
+    width: 100%;
+    height: 80%;
+}
+
+}
