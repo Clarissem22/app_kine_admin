@@ -8,10 +8,12 @@
               <a routerLink = "/notification">  <img [src]="notification"></a>
           </div>
     </div>
-    <div class="block">
-          <div *ngFor="let parametre of parametres" class="blockparam"><img src="/assets/img/parametres/{{parametre.image}}">
-              <p>{{parametre.description}} </p>
-          </div>
+    <div class="gros-block">
+      <div class="block">
+            <div *ngFor="let parametre of parametres" class="blockparam"><img src="/assets/img/parametres/{{parametre.image}}">
+                <p>{{parametre.description}} </p>
+            </div>
+      </div>
     </div>
     </article>
 </section>
