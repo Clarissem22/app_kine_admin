@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../../../../assets/img/grad.png) no-repeat;
+    background-size: cover;
+    background-color: #3a3a3a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Yeseva One';
+    align-items: center;
+    
+
+
+
+    .container {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        background-color: #1b1b1b;
+        border-radius: 25px;
+        width: 40vw;
+        height: 90%;
+        align-items: center;
+        box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h1{
+            font-weight: 500;
+            font-size: 3em;
+          }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            width:50%;
+
+
+            .inputcontainer{
+                display: flex;
+                flex-direction: column;
+                gap:1vw;
+                width: 100%;
+
+
+
+                label{
+                    font-weight: bold;
+                    font-size: 1.3em;
+                }
+
+                input {
+                    border-radius: 5px;
+                    height: 1.5vw;
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                }
+            }
+
+          }
+          .btncontainer {
+              display: flex;
+              flex-direction: column;
+              gap: 1vw;
+              width: 35%;
+
+
+              button {
+                  color: white;
+                  border-radius: 10px;
+                  letter-spacing: 2px;
+                  height: 2vw;
+
+              }
+
+
+                  .btn-connexion{
+                  background-color: #D61A20;;
+                  }
+                  .btn-inscription{
+                  background-color: #3A3A3A;
+                  }
+
+                  a{
+                      text-decoration: none;
+                      list-style-type: none;
+                      color: white;
+                  }
+
+          }
+
+        }
+        .bloc {
+          height: 30%;
+          width: 80%;
+          margin: 0 0 3% 20%;
+          border-radius: 25px;
+          background-color: #1b1b1b;
+          color: white;
+          box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+          .contenu{
+              height: 90%;
+              width: 95%;
+              display: flex;
+              justify-content: center;
+             align-items: center;
+      
+             .img{
+                 height: 90%;
+      
+                 margin: 2%;
+      
+                 img{
+                 object-fit: cover;
+                 height: 90%;
+                 }
+      
+             }
+      
+      
+          }
+      }
+}
+

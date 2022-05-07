@@ -9,7 +9,7 @@ import { PatientComponent } from '../patient/patient.component';
   styleUrls: ['./new-patient.component.scss']
 })
 export class NewPatientComponent implements OnInit {
-
+  logo!: string;
   newPatientForm!: FormGroup;
   newPatientPreview$!: Observable<PatientComponent>
   emailRegex!: RegExp;
@@ -17,6 +17,7 @@ export class NewPatientComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.logo = "../assets/img/logologin.png";
     this.emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
     this.newPatientForm = this.formBuilder.group({
       nom: [null, Validators.required],

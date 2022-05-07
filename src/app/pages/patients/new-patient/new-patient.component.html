@@ -1,5 +1,7 @@
-<div class="form-card">
-  <h2>NOUVEAU PATIENT</h2>
+<body>
+ <div class="container">
+    <img [src] ="logo">
+    <h1 class="h3 mb-3 font-weight-normal">Nouveau patient</h1>
  <form [formGroup]="newPatientForm">   
     <div class="form-group">
         <label for="nom">Nom</label>
@@ -51,13 +53,13 @@
         </textarea>
     </div>
    
-    <div class="action-buttons">
-        <button type="submit" (click)="onSubmitForm()" [disabled]="newPatientForm.invalid">Enregistrer</button>
+    <div class="btncontainer">
+        <button class="btn-connexion" type="submit" (click)="onSubmitForm()" [disabled]="newPatientForm.invalid">Enregistrer</button>
     </div>
 </form>
 </div>
 
-<div class="patient-card" *ngIf="newPatientPreview$ | async as patient">
+<div class="bloc" *ngIf="newPatientPreview$ | async as patient">
     <div>
         <h2>{{patient.nom | uppercase}} {{patient.prenom | uppercase}}</h2>
         <img [src]="patient.imageUrl" [alt]="patient.nom">
