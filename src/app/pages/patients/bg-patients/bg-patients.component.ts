@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Patient } from '../../../core/models/patient-model';
 
 @Component({
   selector: 'app-bg-patients',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./bg-patients.component.scss']
 })
 export class BgPatientsComponent implements OnInit {
+  @Input() patient!: Patient
   constructor(private router: Router) { }
   title!:string;
   notification!:string;
@@ -19,9 +21,10 @@ export class BgPatientsComponent implements OnInit {
   }
   linkNotifications= "notifications"
   linkContact = "contact"
+  linkCreate= "create"
 
 
   onAddNewPatient(): void {
-    this.router.navigateByUrl('/create')
+    this.router.navigateByUrl('create')
   }
 }

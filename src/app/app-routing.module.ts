@@ -7,8 +7,8 @@ import { ExercicesComponent } from './pages/exercices/exercices.component';
 import { HomeComponent } from './pages/home/home.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { ParametresComponent } from './pages/parametres/parametres.component';
-import { NewPatientComponent } from './pages/patients/new-patient/new-patient.component';
 import { PatientsComponent } from './pages/patients/patients.component';
+import { NewPatientComponent } from './pages/patients/new-patient/new-patient.component';
 
 const routes: Routes = [
   {path: "inscription", component: InscriptionComponent, canActivate: [AuthGuard]},

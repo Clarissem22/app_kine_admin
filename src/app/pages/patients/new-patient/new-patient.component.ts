@@ -49,8 +49,13 @@ export class NewPatientComponent implements OnInit {
   }
 
   onSubmitForm(): void{
-    this.newPatientService.addPatient(this.newPatientForm.value).pipe(
-    tap(()=> this.router.navigateByUrl('/patients'))
-    ).subscribe();
+    
+
+    this.newPatientService.addPatient();
+    
+    // this.newPatientService.addPatient(this.newPatientForm.value).pipe(
+// this.router.navigateByUrl('/patients')
+    // ).subscribe();
     }
-}
+  }
+

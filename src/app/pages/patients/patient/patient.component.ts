@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { sample } from 'rxjs';
 import { Patient } from 'src/app/core/models/patient-model';
 import { NewPatientService } from '../../../core/services/new-patient.service';
 
@@ -9,31 +10,42 @@ import { NewPatientService } from '../../../core/services/new-patient.service';
 })
 export class PatientComponent implements OnInit {
   @Input() patient!: Patient;
-  date : Date;
+  date? : Date;
   nom!: string;
   photo!:string;
-  nbrexo!:number;
+  nbrexo?:number;
 
   id!: number;
           prenom!: string;
-          birthday?: Date;
+          birthday?: string;
           mail?:string;
           telephone?:string;
           imageUrl?: string;
-          dateDebutSuivi?: Date;
+          dateDebutSuivi?: string;
           diagnostic?: string;
           objectif?: string;
           programme?: string;
-          lastConsultation?: Date;
+          lastConsultation?: string;
           note?: string;
   constructor() {
     this.date= new Date ();
    }
 
   ngOnInit(): void {
-    this.nom = "Samuel";
-    this.photo = "assets/img/kineprofil.png";
-    this.nbrexo = 2;
+    this.id= 0;
+    this.nom = "Sam";
+    this.prenom = "Samuel";
+    this.imageUrl= "assets/img/kineprofil.png";
+    this.birthday= "24/06/1998";
+    this.mail= "Samuel@sample.fr";
+    this.telephone= "0633379002" ;
+    this.dateDebutSuivi= "22/02/2022" ;
+    this.diagnostic= "Mal dos" ;
+    this.objectif= "Soulager dos";
+    this.programme= "Exercices dos";
+    this.lastConsultation= "09/05/2022";
+    this.note= "Super";
+    
   }
 
 }

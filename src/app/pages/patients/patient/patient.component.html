@@ -1,20 +1,20 @@
 <div class="bloc">
     <div class="top">
-        <h2>{{patient.nom | uppercase}} {{patient.prenom | uppercase}}</h2>
-        <img [src]="patient.imageUrl" [alt]="patient.nom">
+        <h2>{{nom | uppercase}} {{prenom | uppercase}}</h2>
+        <img [src]="imageUrl" [alt]="prenom">
     </div>
     <div class="center">
-        <p>{{patient.birthday}}</p>
-        <p>{{patient.mail}}</p>
-        <p>{{patient.telephone}}</p>
-        <p>Suivi depuis le : {{patient.telephone}}</p>
+        <p>{{birthday}}</p>
+        <p>{{mail}}</p>
+        <p>{{telephone}}</p>
+        <p>Suivi depuis le : {{telephone}}</p>
     </div>
     <div class="end">
-        <p>Diagnostic : {{patient.diagnostic}}</p>
-        <p>Objectif:{{patient.objectif}}</p>
-        <p>Programme{{patient.programme}}</p>
-        <p>Dernière consultation : {{patient.lastConsultation}}</p>
-        <p>Notes : {{patient.note}}</p>
+        <p>Diagnostic : {{diagnostic}}</p>
+        <p>Objectif : {{objectif}}</p>
+        <p>Programme : {{programme}}</p>
+        <p>Dernière consultation : {{lastConsultation}}</p>
+        <p>Notes : {{note}}</p>
     </div>
 
 </div>
