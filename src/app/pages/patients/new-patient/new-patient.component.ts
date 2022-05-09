@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { map, Observable } from 'rxjs';
+import { PatientComponent } from '../patient/patient.component';
 
 @Component({
   selector: 'app-new-patient',
@@ -7,17 +9,21 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./new-patient.component.scss']
 })
 export class NewPatientComponent implements OnInit {
-
-  snapForm!: FormGroup;
+  logo!: string;
+  newPatientForm!: FormGroup;
+  newPatientPreview$!: Observable<PatientComponent>
+  emailRegex!: RegExp;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.snapForm = this.formBuilder.group({
-      nom: [null],
-      prenom: [null],
+    this.logo = "../assets/img/logologin.png";
+    this.emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    this.newPatientForm = this.formBuilder.group({
+      nom: [null, Validators.required],
+      prenom: [null, Validators.required],
       birthday: [null],
-      mail: [null],
+      mail: [null, Validators.required, Validators.pattern(this.emailRegex)],
       telephone: [null],
       imageUrl: [null],
       dateDebutSuivi: [null],
@@ -26,11 +32,20 @@ export class NewPatientComponent implements OnInit {
       programme: [null],
       lastConsultation: [null],
       note: [null],
-    })
+    }, {
+      updateOn: "blur"
+    });
+
+    this.newPatientPreview$ = this.newPatientForm.valueChanges.pipe(
+      map(formValue => ({
+        ...formValue,
+        id: 0
+      }))
+    );
   }
 
   onSubmitForm(): void {
-    console.log(this.snapForm.value);
+    console.log(this.newPatientForm.value);
     
   }
 }
