@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
+import { NewPatientService } from 'src/app/core/services/new-patient.service';
 import { PatientComponent } from '../patient/patient.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-patient',
@@ -14,7 +16,9 @@ export class NewPatientComponent implements OnInit {
   newPatientPreview$!: Observable<PatientComponent>
   emailRegex!: RegExp;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private newPatientService: NewPatientService,
+              private router: Router ) { }
 
   ngOnInit(): void {
     this.logo = "../assets/img/logologin.png";
@@ -44,8 +48,9 @@ export class NewPatientComponent implements OnInit {
     );
   }
 
-  onSubmitForm(): void {
-    console.log(this.newPatientForm.value);
-    
-  }
+  onSubmitForm(): void{
+    this.newPatientService.addPatient(this.newPatientForm.value).pipe(
+    tap(()=> this.router.navigateByUrl('/patients'))
+    ).subscribe();
+    }
 }

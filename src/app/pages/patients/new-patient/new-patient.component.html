@@ -60,23 +60,21 @@
 </div>
 
 <div class="bloc" *ngIf="newPatientPreview$ | async as patient">
-    <div>
+    <div class="top">
         <h2>{{patient.nom | uppercase}} {{patient.prenom | uppercase}}</h2>
         <img [src]="patient.imageUrl" [alt]="patient.nom">
     </div>
-    <div>
+    <div class="center">
         <p>{{patient.birthday}}</p>
         <p>{{patient.mail}}</p>
         <p>{{patient.telephone}}</p>
         <p>Suivi depuis le : {{patient.telephone}}</p>
     </div>
-    <div>
+    <div class="end">
         <p>Diagnostic : {{patient.diagnostic}}</p>
         <p>Objectif:{{patient.objectif}}</p>
         <p>Programme{{patient.programme}}</p>
         <p>Dernière consultation : {{patient.lastConsultation}}</p>
-    </div>
-    <div>
         <p>Notes : {{patient.note}}</p>
     </div>
 

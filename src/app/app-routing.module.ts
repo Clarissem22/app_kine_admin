@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: "exercices", component: ExercicesComponent, canActivate: [AuthGuard] },
   {path: "calendrier", component: CalendrierComponent, canActivate: [AuthGuard] },
   {path: "patients", component: PatientsComponent, canActivate: [AuthGuard] },
-  {path: "create", component: NewPatientComponent, canActivate: [AuthGuard] },
+  {path: "create", component: NewPatientComponent},
   {path: "contact", component: ContactComponent, canActivate: [AuthGuard] },
   {path: "parametres", component: ParametresComponent, canActivate: [AuthGuard] },
 
