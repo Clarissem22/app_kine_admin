@@ -6,6 +6,11 @@ import { Patient } from '../models/patient-model';
   providedIn: 'root',
 })
 export class NewPatientService{
+
+
+  constructor() { }
+
+
   private token!: string;
 
   patients: Patient[] = [
