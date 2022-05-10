@@ -37,7 +37,7 @@ export class PatientComponent implements OnInit {
     this.prenom = "Samuel";
     this.imageUrl= "assets/img/kineprofil.png";
     this.birthday= "24/06/1998";
-    this.mail= "Samuel@sample.fr";
+    this.mail= "Samuel@sam.fr";
     this.telephone= "0633379002" ;
     this.dateDebutSuivi= "22/02/2022" ;
     this.diagnostic= "Mal dos" ;

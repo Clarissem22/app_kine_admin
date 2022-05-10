@@ -1,6 +1,6 @@
 .bloc {
     height: 30%;
-    width: 50%;
+    width: 70%;
     margin: 0 0 3% 20%;
     border-radius: 25px;
     background-color: #1b1b1b;
@@ -29,15 +29,23 @@
     }
     .center{
         height: 90%;
-        width: 40%;
+        width: 20%;
         display: flex;
         flex-direction: column;
     }
 
     .end{
-      height: 90%;
-      width: 40%;
+      height: 85%;
+      width: 50%;
       display: flex;
       flex-direction: column;
+      background-color: white;
+      border-radius: 30px;
+      color: black;
+
+      p{
+          width: 95%;
+          margin-left: 4%;
+      }
     }
 }
