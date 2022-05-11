@@ -94,18 +94,18 @@
       <img [src]="patient.imageUrl" /> 
       </div>
       <div class="infos">
-      <p><u>Date de naissance :</u> {{ patient.birthday }}</p>
-      <p><u>Mail :</u> {{ patient.mail }}</p>
-      <p><u>Téléphone :</u> {{ patient.telephone }}</p>
-      <p><u>Suivi depuis le :</u> {{ patient.telephone }}</p>
+      <p><u>Date de naissance : </u> {{ patient.birthday }}</p>
+      <p><u>Mail : </u> {{ patient.mail }}</p>
+      <p><u>Téléphone : </u> {{ patient.telephone }}</p>
+      <p><u>Suivi depuis le : </u> {{ patient.dateDebutSuivi }}</p>
       </div>
       </div>
     <div class="end">
-      <p><u>Diagnostic :</u> {{ patient.diagnostic }}</p>
-      <p><u>Objectif: </u>{{ patient.objectif }}</p>
-      <p><u>Programme:</u> {{ patient.programme }}</p>
-      <p><u>Dernière consultation :</u> {{ patient.lastConsultation }}</p>
-      <p><u>Notes :</u> {{ patient.note }}</p>
+      <p><u>Diagnostic :</u> <span>{{ patient.diagnostic }}</span></p>
+      <p><u>Objectif : </u><span>{{ patient.objectif }}</span></p>
+      <p><u>Programme : </u> <span>{{ patient.programme }}</span></p>
+      <p><u>Dernière consultation : </u> <span>{{ patient.lastConsultation }}</span></p>
+      <p><u>Notes : </u> <span>{{ patient.note }}</span></p>
     </div>
   </div>
 </body>

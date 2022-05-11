@@ -50,22 +50,22 @@ export class NewPatientComponent implements OnInit {
     );
   }
 
-  onSubmitForm(): void{
-    // this.newPatientService.addPatient();
-    this.addPatient();
+  // onSubmitForm(): void{
+  //   this.newPatientService.addPatient();
+  //   this.addPatient();
     
     // this.newPatientService.addPatient(this.newPatientForm.value).pipe(
 // this.router.navigateByUrl('/patients')
     // ).subscribe();
-    }
+    
 
 
 
-    addPatient() {
+    onSubmitForm(): void {
       // this.http.get<any>('http://127.0.0.1:8000/addPatient')
       this.http.post('http://127.0.0.1:8000/addPatient',  this.newPatientForm )
       console.log("ok");
-      // this.router.navigateByUrl('/patients')
+      this.router.navigateByUrl('/patients')
   
   
     }

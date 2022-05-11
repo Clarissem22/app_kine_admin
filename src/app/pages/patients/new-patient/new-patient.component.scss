@@ -109,40 +109,52 @@ body {
 
      
       .top {
-        height: 15%;
-        width: 90%;
+        height: 25%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
 
         
-        div{
-          height: 40%;
-          width: 100%;
+        .name{
+          height: 90%;
+          width: 50%;
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
           
           img {
-            height: 40%;
+            height: 50%;
             width: auto;
             object-fit: cover;
             border-radius: 100%;
-            margin-left: 5% ;
+            margin-bottom: 5% ;
           }
+        }
           .infos{
-            height: 40%;
+            height: 90%;
+            width: 50%;
             display: flex;
+            flex-direction: column;
+            font-size: large;
+            justify-content: center;
+            align-items: center;
+
           p{
             display: flex;
+            font-size: bold;
+
           }
-          }
+          
         }
       }
      
 
       .end {
-        height: 80%;
+        height: 70%;
         width: 90%;
+        margin-bottom: 2%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -152,6 +164,8 @@ body {
         background-color: white;
         border-radius: 30px;
         color: black;
+        font-size: large;
+
 
       }
     }
