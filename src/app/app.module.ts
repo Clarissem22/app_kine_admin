@@ -63,7 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

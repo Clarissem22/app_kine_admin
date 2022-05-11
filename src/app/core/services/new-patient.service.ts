@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Patient } from '../models/patient-model';
 import { Observable, map, switchMap } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NewPatientService{
   private token!: string;
-constructor(private http: HttpClient) {}
+constructor(private http: HttpClient,
+            private router: Router) {}
 
   // getAllPatients(): Observable<Patient[]>{
   //     return this.http.get<Patient[]>('http://localhost:4200/create')
@@ -22,9 +24,11 @@ constructor(private http: HttpClient) {}
     return this.token;
   }
 
-  addPatient () {
-    this.http.get('http://127.0.0.1:8000/addPatient')
-    console.log("oo");
+  addPatient() {
+    // this.http.get<any>('http://127.0.0.1:8000/addPatient')
+    // this.http.post('http://127.0.0.1:8000/addPatient', )
+    console.log("ok");
+    // this.router.navigateByUrl('/patients')
 
 
   }

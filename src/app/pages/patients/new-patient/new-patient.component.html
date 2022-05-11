@@ -1,81 +1,111 @@
 <body>
- <div class="container">
-    <img [src] ="logo">
+  <div class="container">
+    <img [src]="logo" />
     <h1 class="h3 mb-3 font-weight-normal">Nouveau patient</h1>
- <form [formGroup]="newPatientForm">   
-    <div class="form-group">
-        <label for="nom">Nom</label>
-        <input id="nom" type="text" formControlName="nom">
-    </div>
-    <div class="form-group">
-        <label for="prenom">Prénom</label>
-        <input id="prenom" type="text" formControlName="prenom">
-    </div>
-    <div class="form-group">
-        <label for="birthday">Date de naissance</label>
-        <input id="birthday" type="date" formControlName="birthday">
-    </div>
-     <div class="form-group">
-        <label for="mail">Mail</label>
-        <input id="mail" type="text" formControlName="mail">
-    </div>
-      <div class="form-group">
-        <label for="telephone">Téléphone</label>
-        <input id="telephone" type="string" formControlName="telephone">
-    </div>
-    <div class="form-group">
-        <label for="imageUrl">Photo de profil</label>
-        <input id="imageUrl" type="text" formControlName="imageUrl">
-    </div>
-     <div class="form-group">
-        <label for="dateDebutSuivi">Suivi depuis le : </label>
-        <input id="dateDebutSuivi" type="date" formControlName="dateDebutSuivi">
-    </div>
-    <div class="form-group">
-        <label for="diagnostic">Diagnostic</label>
-        <input id="diagnostic" type="text" formControlName="diagnostic">
-    </div>
-    <div class="form-group">
-        <label for="objectif">Objectif</label>
-        <input id="objectif" type="text" formControlName="objectif">
-    </div>
-    <div class="form-group">
-        <label for="programme">Programme</label>
-        <input id="programme" type="text" formControlName="programme">
-    </div>
-     <div class="form-group">
-        <label for="lastConsultation">Dernière consultation</label>
-        <input id="lastConsultation" type="date" formControlName="lastConsultation">
-    </div>
-    <div class="form-group">
-        <label for="note">Notes</label>
-        <textarea id="note" type="text" formControlName="note" rows="4">
-        </textarea>
-    </div>
-   
-    <div class="btncontainer">
-        <button class="btn-connexion" type="submit" (click)="onSubmitForm()" [disabled]="newPatientForm.invalid">Enregistrer</button>
-    </div>
-</form>
-</div>
+    <form [formGroup]="newPatientForm">
+      <div class="formstyle">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input id="nom" type="text" formControlName="nom" />
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input id="prenom" type="text" formControlName="prenom" />
+        </div>
+      </div>
+      <div class="formstyle">
+        <div class="form-group">
+          <label for="birthday">Date de naissance</label>
+          <input id="birthday" type="date" formControlName="birthday" />
+        </div>
+        <div class="form-group">
+          <label for="mail">Mail</label>
+          <input id="mail" type="text" formControlName="mail" />
+        </div>
+      </div>
+      <div class="formstyle">
+        <div class="form-group">
+          <label for="telephone">Téléphone</label>
+          <input id="telephone" type="string" formControlName="telephone" />
+        </div>
+        <div class="form-group">
+          <label for="imageUrl">Photo de profil</label>
+          <input id="imageUrl" type="text" formControlName="imageUrl" />
+        </div>
+      </div>
+      <div class="formstyle">
+        <div class="form-group">
+          <label for="dateDebutSuivi">Suivi depuis le : </label>
+          <input
+            id="dateDebutSuivi"
+            type="date"
+            formControlName="dateDebutSuivi"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastConsultation">Dernière consultation</label>
+          <input
+            id="lastConsultation"
+            type="date"
+            formControlName="lastConsultation"
+          />
+        </div>
+      </div>
+      <div class="formstyle">
+        <div class="form-group">
+          <label for="diagnostic">Diagnostic</label>
+          <textarea id="diagnostic" type="text" formControlName="diagnostic"> </textarea>
+        </div>
+        <div class="form-group">
+          <label for="objectif">Objectif</label>
+          <textarea id="objectif" type="text" formControlName="objectif"> </textarea>
+        </div>
+      </div>
+      <div class="formstyle">
+        <div class="form-group">
+          <label for="programme">Programme</label>
+          <textarea id="programme" type="text" formControlName="programme"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="note">Notes</label>
+          <textarea id="note" type="text" formControlName="note" rows="4">
+          </textarea>
+        </div>
+      </div>
+      <div class="formstyle-btn">
+      <div class="btncontainer">
+        <button
+          class="btn-connexion"
+          type="submit"
+          (click)="onSubmitForm()"
+          [disabled]="newPatientForm.invalid"
+        >
+          Enregistrer
+        </button>
+      </div>
+      </div>
+    </form>
+  </div>
 
-<div class="bloc" *ngIf="newPatientPreview$ | async as patient">
+  <div class="bloc" *ngIf="newPatientPreview$ | async as patient">
     <div class="top">
-        <h2>{{patient.nom | uppercase}} {{patient.prenom | uppercase}}</h2>
-        <img [src]="patient.imageUrl" [alt]="patient.nom">
-    </div>
-    <div class="center">
-        <p>{{patient.birthday}}</p>
-        <p>{{patient.mail}}</p>
-        <p>{{patient.telephone}}</p>
-        <p>Suivi depuis le : {{patient.telephone}}</p>
-    </div>
+    <div class="name">
+      <h2>{{ patient.nom | uppercase }} {{ patient.prenom | uppercase }}</h2>
+      <img [src]="patient.imageUrl" /> 
+      </div>
+      <div class="infos">
+      <p><u>Date de naissance :</u> {{ patient.birthday }}</p>
+      <p><u>Mail :</u> {{ patient.mail }}</p>
+      <p><u>Téléphone :</u> {{ patient.telephone }}</p>
+      <p><u>Suivi depuis le :</u> {{ patient.telephone }}</p>
+      </div>
+      </div>
     <div class="end">
-        <p>Diagnostic : {{patient.diagnostic}}</p>
-        <p>Objectif:{{patient.objectif}}</p>
-        <p>Programme{{patient.programme}}</p>
-        <p>Dernière consultation : {{patient.lastConsultation}}</p>
-        <p>Notes : {{patient.note}}</p>
+      <p><u>Diagnostic :</u> {{ patient.diagnostic }}</p>
+      <p><u>Objectif: </u>{{ patient.objectif }}</p>
+      <p><u>Programme:</u> {{ patient.programme }}</p>
+      <p><u>Dernière consultation :</u> {{ patient.lastConsultation }}</p>
+      <p><u>Notes :</u> {{ patient.note }}</p>
     </div>
-
-</div>
+  </div>
+</body>
