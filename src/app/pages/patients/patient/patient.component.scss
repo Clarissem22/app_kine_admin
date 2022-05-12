@@ -1,7 +1,7 @@
 .bloc {
     height: 30%;
-    width: 80%;
-    margin: 0 0 3% 20%;
+    width: 90%;
+    margin: 0 0 2% 5%;
     border-radius: 25px;
     background-color: #1b1b1b;
     color: white;
@@ -10,29 +10,74 @@
     justify-content: center;
     align-items: center;
 
-    .contenu{
-        height: 90%;
-        width: 95%;
+    .btn{
+        height: 100%;
+        width: 10%;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            height: 30%;
+            width: 90%;
+            background: #d61a20;
+            color: white;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            border-radius: 50%;
+
+
+            &:hover{
+                transform : scale(1.1);
+                transition: 0.3s;
+        
+              }
+            }
+    }
+    .top{
+        height: 90%;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
        align-items: center;
+       color: white;
 
-       .img{
-           height: 90%;
-
+       img{
+           height: 60%;
            margin: 2%;
-
-           img{
            object-fit: cover;
-           height: 90%;
-           }
 
-       }
+
+       }      
+    }
+    .center{
+        height: 90%;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        align-items: center;
 
 
     }
 
+    .end{
+      height: 85%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 30px;
+      color: black;
+      font-size: large;
+      align-items: center;
+
+
+      p{
+          width: 95%;
+          margin-left: 4%;
+      }
     }
-
-
-
+}

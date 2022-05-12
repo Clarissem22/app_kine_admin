@@ -26,7 +26,8 @@ import { PatientComponent } from './pages/patients/patient/patient.component';
 import { BgPatientsComponent } from './pages/patients/bg-patients/bg-patients.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewPatientComponent } from './pages/patients/new-patient/new-patient.component';
-import { HttpClientModule } from '@angular/common/http';
+import { PatientListComponent } from './pages/patients/patient-list/patient-list.component';
+
 
 
 @NgModule({
@@ -51,7 +52,6 @@ import { HttpClientModule } from '@angular/common/http';
     BgPatientsComponent,
     PatientComponent,
     NewPatientComponent,
-
   ],
 
   imports: [

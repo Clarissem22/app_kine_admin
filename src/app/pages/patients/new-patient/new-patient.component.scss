@@ -1,131 +1,173 @@
 body {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    background: url(../../../../assets/img/grad.png) no-repeat;
-    background-size: cover;
-    background-color: #3a3a3a;
-    color: white;
-    display: flex;
-    justify-content: center;
-    font-family: 'Yeseva One';
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../../../../assets/img/grad.png) no-repeat;
+  background-size: cover;
+  background-color: #3a3a3a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Yeseva One";
+  align-items: center;
+
+  .container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #1b1b1b;
+    border-radius: 25px;
+    width: 40%;
+    height: 90%;
     align-items: center;
-    
+    box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+    h1 {
+      font-weight: 500;
+      font-size: 3em;
+    }
 
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 60%;
 
-    .container {
-        margin-top: 2%;
-        margin-bottom: 2%;
-        background-color: #1b1b1b;
-        border-radius: 25px;
-        width: 40vw;
-        height: 90%;
-        align-items: center;
-        box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+      .formstyle {
+        height: 48%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
 
-        h1{
-            font-weight: 500;
-            font-size: 3em;
-          }
-
-        form {
-            display: flex;
-            flex-direction: column;
-
-            width:50%;
-
-
-            .inputcontainer{
-                display: flex;
-                flex-direction: column;
-                gap:1vw;
-                width: 100%;
-
-
-
-                label{
-                    font-weight: bold;
-                    font-size: 1.3em;
-                }
-
-                input {
-                    border-radius: 5px;
-                    height: 1.5vw;
-                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-                }
-            }
-
-          }
-          .btncontainer {
-              display: flex;
-              flex-direction: column;
-              gap: 1vw;
-              width: 35%;
-
-
-              button {
-                  color: white;
-                  border-radius: 10px;
-                  letter-spacing: 2px;
-                  height: 2vw;
-
-              }
-
-
-                  .btn-connexion{
-                  background-color: #D61A20;;
-                  }
-                  .btn-inscription{
-                  background-color: #3A3A3A;
-                  }
-
-                  a{
-                      text-decoration: none;
-                      list-style-type: none;
-                      color: white;
-                  }
-
-          }
-
-        }
-        .bloc {
-          height: 30%;
-          width: 80%;
-          margin: 0 0 3% 20%;
-          border-radius: 25px;
-          background-color: #1b1b1b;
-          color: white;
-          box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+        div {
           display: flex;
+          flex-direction: column;
+          width: 50%;
+          margin: 0 3% 0 2%;
+
+          label {
+            font-weight: bold;
+            font-size: 1.3em;
+          }
+
+          input {
+            border-radius: 5px;
+            height: 40%;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+      .formstyle-btn {
+        width: 100%;
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .btncontainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      width: 35%;
+
+      button {
+        color: white;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        height: 2vw;
+      }
+
+      .btn-connexion {
+        background-color: #d61a20;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+        }
+
+        a {
+          text-decoration: none;
+          list-style-type: none;
+          color: white;
+        }
+      }
+    }
+}
+    .bloc {
+      height: 90%;
+      width: 40%;
+      margin-left: 4%;
+      border-radius: 25px;
+      background-color: #1b1b1b;
+      color: white;
+      box-shadow: 6px 12px 14px 1px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+     
+      .top {
+        height: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        .name{
+          height: 90%;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
-      
-          .contenu{
-              height: 90%;
-              width: 95%;
-              display: flex;
-              justify-content: center;
-             align-items: center;
-      
-             .img{
-                 height: 90%;
-      
-                 margin: 2%;
-      
-                 img{
-                 object-fit: cover;
-                 height: 90%;
-                 }
-      
-             }
-      
-      
+          
+          img {
+            height: 50%;
+            width: auto;
+            object-fit: cover;
+            border-radius: 100%;
+            margin-bottom: 5% ;
           }
+        }
+          .infos{
+            height: 90%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            font-size: large;
+            justify-content: center;
+            align-items: center;
+
+          p{
+            display: flex;
+            font-size: bold;
+
+          }
+          
+        }
       }
-}
+     
+
+      .end {
+        height: 70%;
+        width: 90%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        color: black;
+        font-size: large;
+
+
+      }
+    }
+  }
 
