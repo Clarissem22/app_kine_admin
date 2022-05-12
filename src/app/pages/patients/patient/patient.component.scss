@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: center;
         button {
-            height: 30%;
+            height: 25%;
             width: 90%;
             background: #d61a20;
             color: white;
@@ -25,7 +25,7 @@
             font: inherit;
             cursor: pointer;
             outline: inherit;
-            border-radius: 50%;
+            border-radius: 5%;
 
 
             &:hover{
@@ -53,19 +53,22 @@
        }      
     }
     .center{
-        height: 90%;
         width: 20%;
         display: flex;
         flex-direction: column;
         font-size: large;
         align-items: center;
 
+        p{
+            display: flex;
+            text-align: center;
 
+        }
     }
 
     .end{
       height: 85%;
-      width: 50%;
+      width: 45%;
       display: flex;
       flex-direction: column;
       background-color: white;
@@ -73,6 +76,7 @@
       color: black;
       font-size: large;
       align-items: center;
+      
 
 
       p{

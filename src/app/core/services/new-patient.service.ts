@@ -9,10 +9,6 @@ import { Router } from '@angular/router';
 })
 export class NewPatientService{
 
-
-  constructor() { }
-
-
   private token!: string;
 constructor(private http: HttpClient,
             private router: Router) {}
@@ -28,6 +24,12 @@ constructor(private http: HttpClient,
   getToken(): string {
     return this.token;
   }
+
+  getAllPatients():Observable<Patient[]>{
+
+    return this.http.get<Patient[]>('http://127.0.0.1:8000/getPatient');
+
+ }
 
   addPatient() {
     // this.http.get<any>('http://127.0.0.1:8000/addPatient')

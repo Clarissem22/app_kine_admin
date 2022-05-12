@@ -26,6 +26,7 @@ import { PatientComponent } from './pages/patients/patient/patient.component';
 import { BgPatientsComponent } from './pages/patients/bg-patients/bg-patients.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewPatientComponent } from './pages/patients/new-patient/new-patient.component';
+import { HttpClientModule } from '@angular/common/http';
 import { PatientListComponent } from './pages/patients/patient-list/patient-list.component';
 
 
@@ -52,7 +53,7 @@ import { PatientListComponent } from './pages/patients/patient-list/patient-list
     BgPatientsComponent,
     PatientComponent,
     NewPatientComponent,
-  ],
+    PatientListComponent  ],
 
   imports: [
     BrowserModule,
@@ -62,7 +63,7 @@ import { PatientListComponent } from './pages/patients/patient-list/patient-list
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
 
   providers: [],
