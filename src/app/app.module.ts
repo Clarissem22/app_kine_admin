@@ -29,6 +29,7 @@ import { NewPatientComponent } from './pages/patients/new-patient/new-patient.co
 import { PatientListComponent } from './pages/patients/patient-list/patient-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,6 @@ import { PatientListComponent } from './pages/patients/patient-list/patient-list
     BgPatientsComponent,
     PatientComponent,
     NewPatientComponent,
-    PatientListComponent,
   ],
 
   imports: [
@@ -62,7 +62,9 @@ import { PatientListComponent } from './pages/patients/patient-list/patient-list
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

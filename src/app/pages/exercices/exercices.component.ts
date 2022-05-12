@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Exercices } from '../../core/models/exercice-model';
+import { NewExercicesService } from '../../core/services/new-exercices.service';
+
 
 @Component({
   selector: 'app-exercices',
@@ -7,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExercicesComponent implements OnInit {
 
-  constructor() { }
+  exercices$!: Observable<Exercices[]>;
+
+
+  constructor(){}
 
   ngOnInit(): void {
   }

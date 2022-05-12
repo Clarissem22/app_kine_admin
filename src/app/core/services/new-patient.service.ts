@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class NewPatientService{
+
+
+  constructor() { }
+
+
   private token!: string;
 constructor(private http: HttpClient,
             private router: Router) {}

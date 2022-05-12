@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CdkAccordionComponent implements OnInit {
 
-  items = ['FAQ', 'Contact Kiné', 'Aides et Associations', 'Contactez-nous', 'Faire un Don'];
+  items = ['FAQ', 'Contact patient', 'Aides et Associations', 'Contactez-nous', 'Faire un Don'];
   expandedIndex = 0;
 
   constructor(private router: Router) { }
